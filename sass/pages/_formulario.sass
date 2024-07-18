@@ -5,9 +5,19 @@
         background: $color-azul
         grid-area: secc
         display: grid
-        grid-auto-columns: 1fr 1fr
+        grid-template-columns:  1fr 1fr
         grid-template-rows: 100vh
         grid-template-areas: 'sec1 sec2'
+        @media screen and (max-width:$mobil-s)
+            grid-template-columns:  1fr 
+            grid-template-rows: 200px 500px
+        @media screen and (min-width:$mobil-s) and (max-width:375px)
+            grid-template-columns:  1fr 
+            grid-template-rows: 200px 500px
+        @media screen and (min-width:376px) and (max-width:425px)
+            grid-template-columns:  1fr 
+            grid-template-rows: 200px 500px
+        
         .conteiner-descripcion-formulario
             grid-area: sec1
             justify-content: center
@@ -17,32 +27,37 @@
             grid-auto-columns: 1fr 
             grid-template-rows: 70px auto
             grid-template-areas: 'titu' 'des'
+            @media screen and (min-width:768px) 
+                    margin-bottom: 300px
             .conteiner-titulo-des
                 grid-area: titu
+                color: $color-amarillo
             .formu-des
                 grid-area: des
+                color: $color-amarillo
         .conteiner-formulario
             grid: sec2
             justify-content: center
             justify-items: center
             align-content: center
+
             .cont-form
                 margin-left: 50px
                 height: 400px
                 width: 500px
-                // border: 1px solid black
+                @media screen and (min-width:426px) and (max-width:768px)
+                    width: 350px
                 .formulario
-                    // border: 1px solid black
                     justify-content: center
                     justify-items: center
                     align-content: center
                     legend
                         text-align: center
-                    li
-                        list-style: none
-                        margin-top: 20px
+                        color: $color-amarillo
+        
                     textarea
                         resize: none
+                        margin-top: 20px
 
                 
                 

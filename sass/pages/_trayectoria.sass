@@ -2,8 +2,7 @@
     @include general
     .principal-trayectoria
         grid-area: secc
-        // background: black
-        background: #063540
+        background: black
         display: grid
         grid-template-columns: 1fr
         grid-template-rows: 70px auto
@@ -11,13 +10,16 @@
         .conteiner-titulo-tra
             grid-area: tit-sec
             text-align: center
+            background: $color-azul
             h1
                 text-transform: uppercase
-                background: $color-azul
                 font-family: $titulo-home
-                font-size: 10px
+                font-size: 50px
                 font-style: $titulo-home-stylo
                 color: $color-amarillo
+                @media screen and (max-width:$mobil-s)
+                    font-size: 26px
+                    margin-top: 20px
 
         .conteiner-trayectoria-info
             grid-area: secc-tra

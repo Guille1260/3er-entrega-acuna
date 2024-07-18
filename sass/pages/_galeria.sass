@@ -2,22 +2,23 @@
     background: black
     @include general
 
-.principal-galeria
-    grid-area: secc
-    display: grid
-    background: #01fff2
-    grid-template-columns: 1fr
-    grid-template-rows: 70px auto auto
-    grid-template-areas: "titu" "secci1" "secci2"
+    .principal-galeria
+        grid-area: secc
+        display: grid
+        background: $color-azul
+        grid-template-columns: 1fr
+        grid-template-rows: 70px auto auto
+        grid-template-areas: "titu" "secci1" "secci2"
     .conteiner-titulo-galeria
         grid-area: titu
         text-align: center
-        text-transform: uppercase
-        background: $color-azul
-        font-family: $titulo-home
-        font-size: 50px
-        font-style: $titulo-home-stylo
-        color: $color-amarillo
+        h1
+            text-transform: uppercase
+            background: $color-azul
+            font-family: $titulo-home
+            font-size: 50px
+            font-style: $titulo-home-stylo
+            color: $color-amarillo
     .conteiner-subtitulo-galeria
         background: #063540
     .titulo-img
@@ -27,7 +28,7 @@
         font-style: $titulo-home-stylo
         color: $color-amarillo
         margin-left: 5%
-
+    
     .seccion-Imagenes
         grid-area: secci1
         @include gale
@@ -64,4 +65,4 @@
             @media screen and (min-width:426px) and (max-width:768px)
                 grid-template-columns: repeat(2,1fr)
             @media screen and (min-width:769px) and (max-width:1024px)
-                grid-template-columns: repeat(3,1fr)
+                grid-template-columns: repeat(2,1fr)
