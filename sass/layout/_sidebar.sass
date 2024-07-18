@@ -1,0 +1,25 @@
+.conteiner-menu
+    @include bg-difum
+    border: $bordes-estilo
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37)
+    .conteiner-nombre-logo-desplegado
+        display: grid
+        grid-template-columns: auto auto auto
+        grid-template-rows: auto
+        align-items: center
+        text-align: center
+        border: $bordes-estilo
+        background: $color-azul
+        .logo-des 
+            @include tam-logo
+            background: $color-amarillo
+            &:hover
+                opacity: 0.8
+          
+        .titulo-des
+            font-size: 35px
+            text-transform: uppercase
+            align-items: center
+            color: $color-amarillo
+            margin-right: 40px
+ 

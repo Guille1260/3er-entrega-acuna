@@ -1,0 +1,48 @@
+.seccion-formulario
+    @include general
+    
+    .principal-formulario
+        background: $color-azul
+        grid-area: secc
+        display: grid
+        grid-auto-columns: 1fr 1fr
+        grid-template-rows: 100vh
+        grid-template-areas: 'sec1 sec2'
+        .conteiner-descripcion-formulario
+            grid-area: sec1
+            justify-content: center
+            justify-items: center
+            align-content: center
+            display: grid
+            grid-auto-columns: 1fr 
+            grid-template-rows: 70px auto
+            grid-template-areas: 'titu' 'des'
+            .conteiner-titulo-des
+                grid-area: titu
+            .formu-des
+                grid-area: des
+        .conteiner-formulario
+            grid: sec2
+            justify-content: center
+            justify-items: center
+            align-content: center
+            .cont-form
+                margin-left: 50px
+                height: 400px
+                width: 500px
+                // border: 1px solid black
+                .formulario
+                    // border: 1px solid black
+                    justify-content: center
+                    justify-items: center
+                    align-content: center
+                    legend
+                        text-align: center
+                    li
+                        list-style: none
+                        margin-top: 20px
+                    textarea
+                        resize: none
+
+                
+                

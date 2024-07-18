@@ -1,0 +1,35 @@
+@media screen and (max-width:$mobil-s)
+    .seccion-formulario
+
+        .principal-formulario
+            grid-auto-columns: 1fr
+            grid-template-areas: 'sec1''sec2'
+            .conteiner-descripcion-formulari
+                justify-content: normal
+                justify-items: normal
+                align-content: normal
+                .conteiner-titulo-des
+                    grid-area: titu
+                .formu-des
+                    grid-area: des
+            .conteiner-formulario
+                justify-content: normal
+                justify-items: normal
+                align-content: normal
+                .cont-form
+                    margin-left: 0px
+                    height: 100px
+                    width: 100%
+                    // border: 1px solid black
+                    .formulario
+                        // border: 1px solid black
+                        justify-content: center
+                        justify-items: center
+                        align-content: center
+                        legend
+                            text-align: center
+                        li
+                            list-style: none
+                            margin-top: 20px
+                        textarea
+                            resize: none

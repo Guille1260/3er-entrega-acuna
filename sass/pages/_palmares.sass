@@ -1,0 +1,85 @@
+.seccion-palmares
+    @include general
+    .principal-palmares
+        grid-area: secc
+        display: grid
+        background: #063540
+        grid-template-columns: 1fr
+        grid-template-rows: 70px repeat(3,auto)
+        grid-template-areas: "titulo-sec""seccion1""seccion2""seccion3"
+        .conteiner-titulo-pal
+            height: 100%
+            width: 100%
+            grid-area: titulo-sec
+            text-align: center
+            h1
+                text-transform: uppercase
+                background: $color-azul
+                font-family: $titulo-home
+                font-size: 50px
+                font-style: $titulo-home-stylo
+                color: $color-amarillo
+            
+        
+        .titulo-seccion
+            font-family: $titulo-home
+            font-size: 50px
+            font-style: $titulo-home-stylo
+            color: $color-amarillo
+            margin-left: 5%
+        
+        .seccion-Nivel-1
+            grid-area: seccion1
+            background: palevioletred
+            @include palmares-secciones
+        
+        .seccion-Nivel-2
+            grid-area: seccion2
+            background: palegreen
+            @include palmares-secciones
+        
+        .seccion-Nivel-3
+            grid-area: seccion3
+            background: purple
+            @include palmares-secciones
+        
+        .conteiner-tarjeta
+            border: 1px solid black
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: 50px auto
+            grid-template-areas: "tit-tar" "det-tar"
+            .conteiner-titulo-tarjeta
+                grid-template-rows: tit-tar
+                background: $color-azul
+                color: $color-amarillo
+                text-align: center
+                align-content: center
+                .titulo-tarjeta
+                    font-size: 20px
+                    text-align: center
+            .conteiner-image-info
+                grid-area: det-tar
+                display: grid
+                grid-template-columns: 150px 1fr
+                grid-template-rows:  auto
+                grid-template-areas:"imge detallesx"
+                .conteiner-img-tarjeta
+                    grid-area: imge
+                    align-content: center
+                    text-align: center
+                    img
+                        height: 150px
+                        width: 150px
+                  
+                .info-copa
+                    height: 100%
+                    align-content: center
+                    text-align: center
+                    grid-area: detallesx
+                    background: $color-azul
+                    color: $color-amarillo
+                    font-size: small
+                    .icono
+                        height: 35px
+      

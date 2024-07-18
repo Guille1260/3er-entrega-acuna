@@ -1,0 +1,58 @@
+.seccion-trayectoria
+    @include general
+    .principal-trayectoria
+        grid-area: secc
+        // background: black
+        background: #063540
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 70px auto
+        grid-template-areas: "tit-sec" "secc-tra"
+        .conteiner-titulo-tra
+            grid-area: tit-sec
+            text-align: center
+            h1
+                text-transform: uppercase
+                background: $color-azul
+                font-family: $titulo-home
+                font-size: 10px
+                font-style: $titulo-home-stylo
+                color: $color-amarillo
+
+        .conteiner-trayectoria-info
+            grid-area: secc-tra
+            background: #506266
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3,auto)
+            grid-template-areas: "uno" "dos" "tres"
+
+            .conteiner-detalles1
+                grid-area: uno
+                background: #506266
+                @include detatlles-trayectoria
+
+            .conteiner-detalles2
+                grid-area: dos
+                background: #506266
+                @include detatlles-trayectoria
+
+            .conteiner-detalles3
+                grid-area: tres
+                background: #506266
+                @include detatlles-trayectoria
+
+            .titulo-det
+                margin-left: 10%
+                font-family: $titulo-header
+                font-size: 45px
+                color: $color-amarillo
+
+            .detalle-parrafo
+                font-family: $des-font
+                font-size: $tamano-des-strong
+                color: white
+
+            .escudo
+                height: 200px
+                width: 200px

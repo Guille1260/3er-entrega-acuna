@@ -1,0 +1,53 @@
+.seccion-home
+    @include general
+    .principal
+        grid-area: secc
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 20% 80%
+        grid-template-areas:"titu" "des"
+        z-index: 1
+        .conteiner-titulo-seccion
+            grid-area: titu
+            width: 100%
+            .titulo
+                width: 700px
+                margin-top: 20px
+                margin-left: 170px
+                text-shadow: black 2px 2px
+                text-transform: uppercase
+                font-family: $titulo-home
+                font-size: $titulo-home-tamno
+                font-style: $titulo-home-stylo
+                color: $color-amarillo
+                &:hover
+                    transform: scale(1.1)
+               
+        .conteiner-descripcion
+            grid-area: des
+            height: 350px
+            width: 800px
+            margin-top: 130px
+            margin-left: 100px  
+            // background:rgba(0, 0, 0, 0.4); 
+            .detalles
+                z-index: 100
+                height: 100%
+                width: 100%
+                // border-width: 10px;
+                // border-style: double;
+                // border-color: $color-amarillo;
+                color: #D6D58E
+                font-family: $des-font
+                font-size: $des-tamano
+                font-style: $des-style
+                strong
+                    margin-top: 10px
+                    margin-left: 50px
+                    text-shadow: black 2px 2px
+                    text-transform: uppercase
+                    font-family: $titulo-home
+                    font-size: $tamano-des-strong
+                    color: $color-amarillo
+                    
+  

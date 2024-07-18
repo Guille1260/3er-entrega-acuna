@@ -1,0 +1,60 @@
+.seccion-estadisticas
+    @include general
+    .principal-estadistias
+        background: #063540
+        grid-area: secc
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 70px auto auto
+        grid-template-areas:"tit" "sec1" "sec2"
+        .conteiner-titulo-sec
+            grid-area: tit
+            text-align: center
+            h1
+                text-transform: uppercase
+                background: $color-azul
+                font-family: $titulo-home
+                font-size: 50px
+                font-style: $titulo-home-stylo
+                color: $color-amarillo
+        
+        .NIvel-club
+            grid-area: sec1
+            @include niveles
+        
+        .NIvel-seleccion
+            grid-area: sec2
+            @include niveles
+        
+        .sub-titulo
+            font-family: $titulo-home
+            font-size: 50px
+            font-style: $titulo-home-stylo
+            color: $color-amarillo
+            margin-left: 5%
+            
+        
+        .conteiner-detalle
+            summary
+                color: $color-amarillo
+            
+            p
+                color: $color-amarillo
+                font-family: $des-font
+                font-size: $tamano-des-strong
+
+            
+            
+        
+        th
+            text-align: center
+            font-size: 20px
+            font-family: $des-font
+        
+        td
+            color: coral
+            text-align: center
+            font-size: 20px
+            font-family: $des-font
+            
+   

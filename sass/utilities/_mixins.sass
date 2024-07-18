@@ -1,0 +1,136 @@
+//utilizado para el tamaño de los logos
+@mixin tam-logo
+    height: 50px
+    width: 50px
+    align-items: center
+
+//difuminado de la sidebar
+@mixin bg-difum
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,225,225,0))
+    backdrop-filter: blur(20px)
+    -webkit-backdrop-filter: blur(20px)
+
+//mixin utilizados en los grid de las paginas
+//page general 
+@mixin general
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: 'barra''secc'
+    .conteiner-header
+        grid-area: barra
+        background: #211F1F
+    
+    #Home-desk
+        background: none
+    
+//page trayectoria 
+@mixin informacion-trayectoria
+    display: grid
+    grid-template-columns:  1fr
+    grid-template-rows: 60px auto
+    grid-template-areas: "sub-tit" "det-p"
+    .conteiner-titulo-det
+        grid-area: sub-tit
+        background: black
+        border-bottom: $bordes-estilo
+    
+    .detalle-parrafo
+        grid-area: det-p
+        
+@mixin detatlles-trayectoria
+    display: grid
+    grid-template-columns:  300px 1fr
+    grid-template-rows: auto
+    grid-template-areas: "imag descri"
+    @media screen and (max-width:$mobil-s)
+        grid-template-columns:  auto 
+        grid-template-rows: auto auto
+        grid-template-areas: "imag " "descri"
+    @media screen and (min-width:$mobil-s) and (max-width:375px)
+        grid-template-columns:  auto 
+        grid-template-rows: auto auto
+        grid-template-areas: "imag " "descri"
+    @media screen and (min-width:321px) and (max-width:375px)
+        grid-template-columns:  auto 
+        grid-template-rows: auto auto
+        grid-template-areas: "imag " "descri"
+    @media screen and (min-width:376px) and (max-width:425px)
+        grid-template-columns:  auto 
+        grid-template-rows: auto auto
+        grid-template-areas: "imag " "descri"
+    @media screen and (min-width:426px) and (max-width:768px)
+        grid-template-columns:  auto 
+        grid-template-rows: auto auto
+        grid-template-areas: "imag  descri" 
+
+    .conteiner-escudo
+        grid-area: imag
+        background: #0F2027
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027)
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027)
+        border: 2px solid white
+        align-items: center
+        align-content: center
+        text-align: center
+    
+    .detalle
+        grid-area: descri
+        background: #063540
+        border: 2px solid white
+        @include informacion-trayectoria
+        
+//page estadisticas
+@mixin niveles
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas:"tit-niv" "tab"
+    .conteiner-sub-titulo
+        grid-area: tit-niv
+        background: #063540
+    
+    .conteiner-tabla
+        grid-area: tab
+
+    //page palmares
+@mixin section-img
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    grid-template-rows:  auto
+    grid-gap: 10px
+    @media screen and (max-width:$mobil-s)
+        grid-template-columns: 1fr
+    @media screen and (min-width:$mobil-s) and (max-width:375px)
+        grid-template-columns: 1fr
+    @media screen and (min-width:376px) and (max-width:425px)
+        grid-template-columns: 1fr
+    @media screen and (min-width:426px) and (max-width:768px)
+        grid-template-columns: repeat(2,1fr)
+    @media screen and (min-width:769px) and (max-width:1024px)
+        grid-template-columns: repeat(2,1fr)
+@mixin palmares-secciones
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: "sub-titulo-sec"  "imagenes"
+    .conteiner-sub-titulo-pal
+        grid-area: sub-titulo-sec
+        background: #063540
+    
+    .conteiner-sec
+        grid-area: imagenes
+        background: olive
+        @include  section-img
+    
+@mixin gale
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: "t" "s"
+    .conteiner-subtitulo-galeria
+        grid-area: t
+    .seccion-tarjetas
+        grid-area: s
+        @include section-img
+    

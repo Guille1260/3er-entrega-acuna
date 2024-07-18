@@ -1,0 +1,24 @@
+.conteiner-header
+    .conteiner-logo-nombre
+        width: 600px
+        display: grid
+        grid-template-columns: 100px 1fr
+        grid-template-rows: 100%
+        margin-left: 20px
+        align-items: center
+        .logo
+            @include tam-logo
+            background: $color-amarillo
+            
+            &:hover
+                opacity: 0.8
+      
+        .nombre
+            margin: 5px 20px 5px 0px
+            font-family: $titulo-header
+            font-size: $titulo-header-tamano
+            color: $color-amarillo
+            font-style: $titulo-header-stylo
+            text-shadow: black 2px 2px
+            text-transform: uppercase
+    
